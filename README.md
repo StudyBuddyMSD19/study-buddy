@@ -1,4 +1,4 @@
--# Study Buddy ![Study Buddy icon](/doc/images/icon.png)
+# Study Buddy
 
 *Flutter web app - PWA - single-page application (SPA) - Firebase backend*
 
@@ -9,6 +9,7 @@
 + [Debug and Test](#debug-and-test)
 + [Build](#build)
 + [Deploy to Firebase](#deploy-to-firebase)
++ [Known Issues](#known-issues)
 
 ## Features
 
@@ -56,6 +57,6 @@
 
 `firebase deploy`
 
-## Known issues
+## Known Issues
 
 TBA
