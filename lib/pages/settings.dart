@@ -25,7 +25,7 @@ class _SettingsPageState extends State<SettingsPage> {
   /* Fetch account data from current user */
   final Stream<QuerySnapshot> _settingsStream = FirebaseFirestore.instance
       .collection('/users')
-      .where('username', isEqualTo: loggedInUser?.displayName)
+      .where('username', isEqualTo: _auth.currentUser?.displayName)
       .snapshots();
 
   CollectionReference users = FirebaseFirestore.instance.collection('users');
