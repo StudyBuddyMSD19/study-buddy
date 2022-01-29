@@ -1,0 +1,66 @@
+@startmindmap
+'https://plantuml.com/mindmap-diagram
+
+title Study Buddy - Firestore Database
+
+<style>
+mindmapDiagram {
+    node {
+      BackgroundColor orange
+    }
+    :depth(1) {
+      BackGroundColor yellow
+    }
+    :depth(2) {
+      BackGroundColor white
+    }
+    :depth(3) {
+      BackGroundColor lightYellow
+    }
+    :depth(4) {
+      BackGroundColor yellow
+    }
+    :depth(5) {
+      BackGroundColor white
+    }
+}
+</style>
+
+* <&people> groups
+** group doc
+*** member_count: number
+*** name: String
+*** *collections*
+**** <&people> group_members
+***** user doc
+****** user_id: String
+
+* <&person> users
+** user doc
+*** email: String
+*** score: number
+*** status: String
+*** username: String
+*** *collections*
+
+**** <&bell> feed
+***** feed doc
+****** exp_earned: number
+****** task_id: String
+****** task_title: String
+****** task_done: timestamp
+
+**** <&people> groups
+***** group doc
+****** name: String
+
+**** <&list> tasks
+***** task doc
+****** completed: bool
+****** description: String
+****** effort: String
+****** time_created: timestamp
+****** time_done: timestamp
+****** title: String
+
+@endmindmap
