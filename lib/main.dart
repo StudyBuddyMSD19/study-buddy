@@ -2,11 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:study_buddy/pages/error.dart';
 import 'package:study_buddy/pages/home.dart';
 import 'package:study_buddy/pages/login.dart';
 import 'firebase_config.dart';
-import 'package:study_buddy/pages/error.dart';
-import 'package:study_buddy/pages/loading.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -88,7 +87,7 @@ class _AppState extends State<App> {
             return const LoginPage();
           }
         }
-        return const LoadingPage();
+        return const ErrorPage();
       },
     );
   }
